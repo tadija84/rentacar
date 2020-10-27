@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>rentacar website</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <div class="wrapper" id="wrapper">
+    <div class="main">
+      <h1 class="main-header">All the vehicles</h1>
+      <div class="main-buttons">
+        <button class="one-main-button" id="pageReload">Page reload</button>
+        <button class="one-main-button" id="newVehicleButton">New vehicle</button>
+        <button class="one-main-button" id="showAllClients">Show all clients</button>
+        <button class="one-main-button" id="addNewClient">New client</button>
+      </div>
+    </div>
+    <div class="all-cars" id="allCars"></div>
+  </div>
+
+  <div class="new-vehicle hiden" id="newVehicle">
+    <h3>Add new vehicle</h3>
+    <select id="vehicleType" class="vehicle-data">
+      <option value="economy">Economy</option>
+      <option value="estate">Estate</option>
+      <option value="luxury">Luxury</option>
+      <option value="SUV">SUV</option>
+      <option value="cargo">Cargo</option>
+    </select>
+    <input type="text" placeholder="Vehicle brand" id="vehicleBrand" class="vehicle-data">
+    <input type="text" placeholder="Vehicle model" id="vehicleModel" class="vehicle-data">
+    <input type="number" placeholder="Vehicle construction year" id="constructionYear" class="vehicle-data">
+    <select id="fuelType" class="vehicle-data">
+      <option value="diesel">Diesel</option>
+      <option value="gasoline">Gasoline</option>
+      <option value="hybrid">Hybrid</option>
+      <option value="electricity">Electricity</option>
+    </select>
+    <input type="number" placeholder="Vehicle number of seats" id="seatsNumber" class="vehicle-data">
+    <input type="number" placeholder="Price per day" id="pricePerDay" class="vehicle-data">
+    <button id="newVehicle">Enter new vehicle</button>
+    <button id="cancelingNewVehicle">Cancel</button>
+  </div>
+
+  <div class="adding-new-client hiden" id="newClientWrap">
+    <h3>Add new client</h3>
+    <input type="text" placeholder="Full name" id="clientsName">
+    <input type="email" placeholder="Client's email" id="clientsEmail">
+    <input type="number" placeholder="Client's phone number" id="clientsPhone">
+    <button id="newClient">Enter new client</button>
+    <button id="cancelNewClient">Cancel</button>
+  </div>
+
+  <div class="all-clients hiden" id="allClients"></div>
+
+  <div class="editing-vehicle hiden" id="editingVehicle"></div>
+
+  <div class="renting-vehicle hiden" id="rentingVehicle"></div>
+
+  <div class="editing-client" id="editingClient"></div>
+
+</body>
+
+<script src="client.js"></script>
+
+</html>
